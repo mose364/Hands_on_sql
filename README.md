@@ -27,10 +27,8 @@ Description: PostgreSQL is an open-source relational database management system 
 3. **Visual Studio Code (VSCode)**
 Description: Visual Studio Code is a lightweight, open-source code editor developed by Microsoft. It supports many programming languages and has rich extensions for various development needs.
 
-4. **Git**
-Description: Git is a distributed version control system that allows developers to track changes to code, collaborate efficiently, and manage project history.
+4. **Git**: Git is a distributed version control system that allows developers to track changes to code, collaborate efficiently, and manage project history.
 
-5. **GitHub**
-Description: GitHub is a cloud-based platform for hosting and managing Git repositories. It provides collaboration features such as pull requests, issue tracking, and project management tools.
+5. **GitHub** :GitHub is a cloud-based platform for hosting and managing Git repositories. It provides collaboration features such as pull requests, issue tracking, and project management tools.
 # The analysis
 # What I have learned
