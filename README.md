@@ -30,7 +30,7 @@ Description: Visual Studio Code is a lightweight, open-source code editor develo
 4. **Git**
 Description: Git is a distributed version control system that allows developers to track changes to code, collaborate efficiently, and manage project history.
 
-5. GitHub
+5. **GitHub**
 Description: GitHub is a cloud-based platform for hosting and managing Git repositories. It provides collaboration features such as pull requests, issue tracking, and project management tools.
 # The analysis
 # What I have learned
