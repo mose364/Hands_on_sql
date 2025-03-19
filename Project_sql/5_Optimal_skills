@@ -1,0 +1,27 @@
+WITH 
+TOP_SKILLS AS (
+    SELECT skill_id, COUNT(job_id) AS count
+    FROM skills_job_dim
+    GROUP BY skill_id
+),
+skill_demand AS (
+    SELECT S.*, skills 
+    FROM TOP_SKILLS S
+    INNER JOIN skills_dim D ON S.skill_id = D.skill_id
+),
+average_salary AS (
+    SELECT d.skills AS Skill, d.skill_id, ROUND(AVG(salary_year_avg), 0) AS AVG_salary
+    FROM skills_job_dim s
+    INNER JOIN skills_dim d ON s.skill_id = d.skill_id
+    INNER JOIN job_postings_fact f ON s.job_id = f.job_id
+    WHERE job_title_short = 'Data Analyst'
+    AND job_work_from_home = TRUE
+    GROUP BY d.skill_id
+    HAVING AVG(salary_year_avg) > 0
+)
+SELECT t.skill_id, 
+       t.skills, 
+       t.count, 
+       v.AVG_salary
+FROM skill_demand t
+INNER JOIN average_salary v ON t.skill_id = v.skill_id;

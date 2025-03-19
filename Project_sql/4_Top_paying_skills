@@ -1,0 +1,12 @@
+select d.skills Skill,
+round(avg(salary_year_avg),0) AVG_salary FROM skills_job_dim s
+inner join skills_dim d
+on s.skill_id=d.skill_id
+INNER JOIN job_postings_fact f
+on s.job_id=f.job_id
+where job_title_short='Data Analyst'
+and job_work_from_home=TRUE
+GROUP BY Skill
+having avg(salary_year_avg) >0
+order by AVG_salary DESC
+limit 25
