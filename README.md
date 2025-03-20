@@ -35,4 +35,6 @@ Description: Visual Studio Code is a lightweight, open-source code editor develo
 ## 1.What are the top-paying data analyst jobs?
 - To identify the highest-paying roles, I combined two tables the job posting fact table and the company dim table using a left join on their common column, the company id. I then filtered the relevant columns: job_id, name, job_title, job_location, job_schedule_type, and salary_year_avg. The results were ordered by salary_year_avg, and I limited the output to the top five highest-paying roles
 
+## 2.What skills are required for these top-paying roles?   
+
 # What I have learned
