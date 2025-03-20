@@ -70,5 +70,17 @@ on T.job_id=s.job_id
 inner join skills_dim d
 on s.skill_id=d.skill_id;
 ```
+## 3.What skills are most in demand for data analysts?
+- To determine the most highly demanded skills for Data Analyst roles, I selected the skill_id column and counted the number of job postings requiring each skill from the skill_job table. I then grouped the results by skill_id and limited the display to the top five most in-demand skills. This query was encapsulated within a Common Table Expression (CTE) named 'Top Skills'. Subsequently, I joined the CTE with the skill dim table to retrieve the skill names corresponding to each skill_id in the CTE.
+
+``` sql
+with TOP_SKILLS AS(
+select skill_id,count(job_id) from skills_job_dim
+group by skill_id
+limit 5)
+SELECT S.*,skills FROM TOP_SKILLS S
+INNER JOIN skills_dim D
+ON S.skill_id=D.skill_id;
+```
 
 # What I have learned
