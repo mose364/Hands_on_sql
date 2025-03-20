@@ -31,4 +31,7 @@ Description: Visual Studio Code is a lightweight, open-source code editor develo
 
 5. **GitHub** :GitHub is a cloud-based platform for hosting and managing Git repositories. It provides collaboration features such as pull requests, issue tracking, and project management tools.
 # The analysis
+- Each query in this project was designed to examine a distinct aspect of the data analysis job market. The approach taken for addressing each question is outlined as follows
+## 1.What are the top-paying data analyst jobs?
+
 # What I have learned
